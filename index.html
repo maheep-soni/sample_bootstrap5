@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>random_website</title>
+    <!-- aos animation library for animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -17,6 +19,7 @@
     <!-- icon link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
+
 </head>
 
 <body>
@@ -27,8 +30,8 @@
 
 
     <!-- navbar start -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 border-bottom">
+    <header id="home">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 border-bottom fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand  fs-2" href="#">iMaee<span class="text-primary">Ps</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -39,28 +42,32 @@
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4 text-center">
                         <li class="nav-item">
-                            <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active text-primary" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">SEO</a></li>
-                                <li><a class="dropdown-item" href="#">Web Design</a></li>
+                                <li><a class="dropdown-item" href="#services">SEO</a></li>
+                                <li><a class="dropdown-item" href="#services">Web Design</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Graphic Design</a></li>
+                                <li><a class="dropdown-item" href="#services">Graphic Design</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            <a class="nav-link" href="#team">Our team</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                       
                     </ul>
 
                 </div>
@@ -82,21 +89,21 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./b5img/banner1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption  d-md-block">
                         <h5>Product1</h5>
                         <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="./b5img/banner2.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption  d-md-block">
                         <h5>Product2</h5>
                         <p>Some representative placeholder content for the second slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="./b5img/banner3.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                         <h5>Product3</h5>
                         <p>Some representative placeholder content for the third slide.</p>
                     </div>
@@ -121,14 +128,14 @@
 
 
     <!-- about start -->
-    <section class="about my-5">
+    <section class="about my-5" id="about">
         <div class="container  ">
             <div class="text-center my-5">
-                <h1>about <span class="text-primary">me</span></h1>
+                <h1  data-aos="fade-up"  data-aos-offset="200">about <span class="text-primary">me</span></h1>
                 <hr class="w-25 m-auto">
             </div>
             <div class="row ">
-                <div class="col-sm-12 col-sm-6 col-lg-6 col-12 pb-5">
+                <div class="col-sm-12 col-sm-6 col-lg-6 col-12 pb-5" data-aos="zoom-in-left"  data-aos-offset="200">
                     <h1>What do you <sapn class="text-primary">want to know? </sapn>
                     </h1>
                     <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse fuga at, incidunt
@@ -193,7 +200,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-6 col-12 m-auto text-center">
-                    <img src="./b5img/s5.jpg" class="img-fluid img-thumbnail">
+                    <img src="./b5img/s5.jpg" class="img-fluid img-thumbnail" data-aos="fade-right"  data-aos-offset="200">
                 </div>
 
             </div>
@@ -205,13 +212,13 @@
 
 
     <!-- services start -->
-    <seciton class="services py-5 bg-light">
+    <seciton class="services py-5 bg-light" id="services">
         <div class="container  ">
             <div class="text-center my-5">
-                <h1>Our <span class="text-primary">services</span></h1>
+                <h1 data-aos="fade-up"  data-aos-offset="200">Our <span class="text-primary">services</span></h1>
                 <hr class="w-25 m-auto">
             </div>
-            <div class="row">
+            <div class="row" data-aos="zoom-in-up" data-aos-offset="200">
                 <div class="col-sm-12 col-md-6 col-lg-4 col-12">
                     <div class="card bg-white text-primary">
                         <div class="card-body">
@@ -247,7 +254,7 @@
                 </div>
 
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5" data-aos="zoom-in-up" data-aos-offset="200">
                 <div class="col-sm-12 col-md-6 col-lg-4 col-12">
                     <div class="card bg-white text-primary">
                         <div class="card-body">
@@ -293,24 +300,112 @@
     <!-- services end -->
 
     <!-- out team start-->
-    <section class="team">
+    <section class="team" id="team">
         <div class="container  ">
             <div class="text-center my-5">
-                <h1>Our <span class="text-primary">team</span></h1>
+                <h1 data-aos="fade-up"  data-aos-offset="200">Our <span class="text-primary">team</span></h1>
                 <hr class="w-25 m-auto">
+            </div>
+            <div class="row " >
+                <div class="col-sm-12 col-md-6 col-lg-4 col-12" data-aos="zoom-in-left" data-aos-offset="200">
+                    <div class="card ">
+                        <div class="inner card-body text-center">
+                            <img src="./b5img/s4.jpg" class=" img-fluid rounded-circle border border-primary p-2">
+                            <h5 class="card-title">Andrew</h5>
+                            <p class="card-text">Front-end Developer</p>
+                            <a href="#" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-12" data-aos="zoom-in-up" data-aos-offset="200">
+                    <div class="card ">
+                        <div class="inner card-body text-center">
+                            <img src="./b5img/s5.jpg" class=" img-fluid rounded-circle border border-primary p-2">
+                            <h5 class="card-title">Andrew</h5>
+                            <p class="card-text">Front-end Developer</p>
+                            <a href="#" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-12" data-aos="zoom-in-right" data-aos-offset="200">
+                    <div class="card ">
+                        <div class="inner card-body text-center">
+                            <img src="./b5img/s3.jpg" class=" img-fluid rounded-circle border border-primary p-2">
+                            <h5 class="card-title">Andrew</h5>
+                            <p class="card-text">Front-end Developer</p>
+                            <a href="#" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-       
+
 
 
 
     </section>
     <!-- out team end-->
+    <!-- contact-->
 
+    <section class="contact py-5" id="contact">
+        <div class="container  ">
+            <div class="text-center my-5">
+                <h1 data-aos="fade-up"  data-aos-offset="200">Feel free <span class="text-primary"> to connect</span></h1>
+                <hr class="w-25 m-auto">
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-12" data-aos="fade-up-left" data-aos-offset="200">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">State</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-12 m-auto text-end p-4" data-aos="fade-up-right" data-aos-offset="200">
+                    <img src="./b5img/s6.jpg" class="img-fluid img-thumbnail p-2">
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-
+    <div class="container-fluid bg-primary text-white text-center p-2 fs-4"> Created by Maheep Kumar</div>
 
 
 
@@ -322,6 +417,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+    <!-- aos animation library for animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>

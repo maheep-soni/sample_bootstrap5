@@ -13,3 +13,8 @@ h1{
     height: 80vh;
 
   }
+  .inner img{
+    min-width: 50%;
+    max-height: 200px;
+    margin:2rem 0;
+  }
